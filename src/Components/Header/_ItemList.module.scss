@@ -1,0 +1,42 @@
+@import "../../Sass/mixins";
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 6px 20px;
+}
+
+.item:first-child {
+  @include prefix(border-radius, 10px 10px 0 0);
+  padding-top: 18px;
+}
+
+.item:last-child {
+  @include prefix(border-radius, 0 0 10px 10px);
+  padding-bottom: 18px;
+}
+
+.item img {
+  width: 16px;
+  height: 16px;
+  margin-right: 14px;
+}
+
+.item span {
+  font-size: 14px;
+  color: var(--medium-gray);
+  @include prefix(transition, color .3s);
+  width: max-content;
+}
+
+.item:hover span {
+  color: var(--almost-black);
+}
+
+
+
+:root {
+  --almost-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+}

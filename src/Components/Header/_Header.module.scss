@@ -1,0 +1,70 @@
+@import "../../../src//Sass/mixins";
+
+.header {
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 96%;
+  margin: 0 auto;
+}
+
+.leftSide {
+  display: flex;
+  align-items: center;
+}
+
+.leftSide>a {
+  margin-right: 70px;
+  display: block;
+  width: 74px;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  
+}
+
+.buttons button {
+  background-color: transparent;
+  outline: none;
+  padding: 10px 24px;
+  color: var(--medium-gray);
+  font-size: 0.8rem;
+  font-weight: bold;
+  user-select: none;
+  cursor: pointer;
+  border: solid 2px var(--medium-gray);
+  @include prefix(border-radius, 10px)
+}
+
+.buttons button:first-child {
+  border: none;
+  margin-right: 10px;
+  @include prefix(transition, color .3s)
+}
+
+.buttons button:first-child:hover {
+  color: var(--almost-black);
+}
+
+.buttons button:last-child {
+  @include prefix(transition, (color .3s, border-color .3s))
+}
+
+.buttons button:last-child:hover {
+  border-color: var(--almost-black);
+  color: var(--almost-black);
+}
+
+:root {
+  --almost-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+}

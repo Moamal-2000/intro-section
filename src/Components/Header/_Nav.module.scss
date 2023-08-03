@@ -1,0 +1,100 @@
+@import "../../../src/Sass/mixins";
+
+.nav ul {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.nav ul li {
+  position: relative;
+}
+
+.nav ul li:not(:last-child),
+.nav ul li .menu {
+}
+
+.nav ul li a {
+  display: block;
+  padding: 10px;
+  color: var(--medium-gray);
+}
+
+.nav ul li .menu,
+.nav ul li a {
+  padding: 16px;
+}
+
+.nav ul li .menu {}
+
+.nav ul li a,
+.nav ul li .menu .nameMenu {
+  font-size: 14px;
+  font-weight: 500;
+  @include prefix(transition, color .3s);
+}
+
+.nav ul li a:hover,
+.nav ul li .menu:hover .nameMenu {
+  color: var(--almost-black);
+}
+
+.nameMenu {
+  color: var(--medium-gray);
+  display: flex;
+  align-items: center;
+}
+
+.nameMenu i {
+  margin-left: 4px;
+  font-size: 12px;
+}
+
+.items {
+  position: absolute;
+  top: 40px;
+  @include prefix(border-radius, 10px);
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.15) 0 7px 20px 0;
+  @include prefix(transition, opacity .3s);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.items.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.items[data-name-menu=menu-one] {
+  left: -44px;
+}
+
+.items[data-name-menu=menu-two] {
+  left: 14px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 6px 20px;
+}
+
+.item:first-child {
+  @include prefix(border-radius, 10px 10px 0 0);
+  padding-top: 18px;
+}
+
+.item:last-child {
+  @include prefix(border-radius, 0 0 10px 10px);
+  padding-bottom: 18px;
+}
+
+
+
+:root {
+  --almost-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+}
