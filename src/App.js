@@ -1,12 +1,13 @@
 import Header from "./Components/Header/Header";
+import Main from "./Components/Main/Main";
 
 function App() {
-  return <div className="App">
-    <Header />
-  </div>;
+  return (
+    <div className="App">
+      <Header />
+      <Main />
+    </div>
+  );
 }
 
 export default App;
-
-//   Get your team in sync, no matter your location. Streamline processes,
-//   create team rituals, and watch productivity soar.

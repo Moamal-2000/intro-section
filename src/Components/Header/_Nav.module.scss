@@ -11,10 +11,6 @@
   position: relative;
 }
 
-.nav ul li:not(:last-child),
-.nav ul li .menu {
-}
-
 .nav ul li a {
   display: block;
   padding: 10px;
@@ -25,8 +21,6 @@
 .nav ul li a {
   padding: 16px;
 }
-
-.nav ul li .menu {}
 
 .nav ul li a,
 .nav ul li .menu .nameMenu {
@@ -53,9 +47,10 @@
 
 .items {
   position: absolute;
+  z-index: 10;
   top: 40px;
   @include prefix(border-radius, 10px);
-  background-color: #fff;
+  background-color: var(--white);
   box-shadow: rgba(100, 100, 111, 0.15) 0 7px 20px 0;
   @include prefix(transition, opacity .3s);
   opacity: 0;
@@ -89,12 +84,4 @@
 .item:last-child {
   @include prefix(border-radius, 0 0 10px 10px);
   padding-bottom: 18px;
-}
-
-
-
-:root {
-  --almost-white: hsl(0, 0%, 98%);
-  --medium-gray: hsl(0, 0%, 41%);
-  --almost-black: hsl(0, 0%, 8%);
 }

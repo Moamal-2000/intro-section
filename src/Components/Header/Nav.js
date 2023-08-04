@@ -1,14 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ItemList from "./ItemList";
 import styles from "./_Nav.module.scss";
 
 const Nav = () => {
   const [isFirstMenuActive, setIsFirstMenuActive] = useState(false);
   const [isSecondMenuActive, setIsSecondMenuActive] = useState(false);
-
-  useEffect(() => {
-    console.log(isFirstMenuActive);
-  }, [isFirstMenuActive]);
 
   return (
     <nav className={styles.nav}>
