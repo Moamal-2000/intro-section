@@ -44,6 +44,12 @@
   }
 }
 
+@media (max-width: 376px) {
+  .mainContent {
+    margin-top: 20px;
+  }
+}
+
 .img {
   background-image: url("../images/image-hero-desktop.png");
   background-repeat: no-repeat;
@@ -52,6 +58,7 @@
   min-width: 420px;
   height: calc(450px + 100px); // from margin-top: 100px;
   margin-left: 16%;
+  user-select: none;
 }
 
 @media (max-width: 1500px) {
@@ -117,20 +124,27 @@
 }
 
 .mainContent button {
-  border: none;
+  border: solid 2px var(--almost-black);
   background-color: var(--almost-black);
   color: var(--almost-white);
   font-size: 14px;
   font-weight: 600;
   padding: 14px 30px;
-  @include prefix(border-radius, 12px);
   margin-bottom: 100px;
+  cursor: pointer;
+  @include prefix(border-radius, 12px);
+  @include prefix(transition, (color .3s, background-color .3s));
 }
 
 @media (max-width: 1200px) {
   .mainContent button {
     margin-bottom: 50px;
   }
+}
+
+.mainContent button:hover {
+  color: var(--almost-black);
+  background-color: var(--almost-white);
 }
 
 .logos {

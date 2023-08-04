@@ -1,3 +1,57 @@
+@import "../../Sass/mixins";
+
 .mobileNav {
 
+}
+
+.openMenuIcon,
+.closeMenuIcon {
+  user-select: none;
+  cursor: pointer;
+  @include prefix(transition, opacity .2s)
+}
+
+.openMenuIcon:hover,
+.closeMenuIcon:hover {
+  opacity: .7;
+}
+
+.openMenuIcon:active,
+.closeMenuIcon:active {
+  @include prefix(transform, scale(.95))
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.35);
+  @include prefix(transition, opacity .3s);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+.navMenu {
+  background-color: var(--white);
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  padding: 16px;
+}
+
+.closeMenuIcon {
+  width: 26px;
+  height: 26px;
 }
