@@ -1,5 +1,11 @@
 @import "../../../src/Sass/mixins";
 
+@media (max-width: 992px) {
+  .nav {
+    display: none;
+  }
+}
+
 .nav ul {
   display: flex;
   align-items: center;

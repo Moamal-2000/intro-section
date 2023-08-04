@@ -2,6 +2,7 @@
 
 .header {
   padding: 20px;
+  height: 86px;
 }
 
 .container {
@@ -10,6 +11,7 @@
   justify-content: space-between;
   width: 96%;
   margin: 0 auto;
+  height: 100%;
 }
 
 .leftSide {
@@ -27,8 +29,10 @@
   align-items: center;
 }
 
-.logo {
-  
+@media (max-width: 992px) {
+  .buttons {
+    display: none;
+  }
 }
 
 .buttons button {

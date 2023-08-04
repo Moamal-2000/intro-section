@@ -1,13 +1,24 @@
 @import "../../Sass/mixins";
 
-.main {
-}
-
 .container {
   width: 74%;
   margin: 0 auto;
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
 }
 
 .mainContent {
@@ -16,12 +27,29 @@
   margin-top: 100px;
 }
 
+@media (max-width: 1200px) {
+  .mainContent {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    width: 96%;
+    min-width: 96%;
+    margin-top: 40px;
+  }
+}
+
 .img {
   background-image: url("../images/image-hero-desktop.png");
   background-repeat: no-repeat;
   background-size: contain;
   width: 500px;
-  min-width: 400px;
+  min-width: 420px;
   height: calc(450px + 100px); // from margin-top: 100px;
   margin-left: 16%;
 }
@@ -32,9 +60,45 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .img {
+    margin: 0;
+    background-position-x: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  .img {
+    background-image: url("../images/image-hero-mobile.png");
+    background-position-x: 0;
+    width: 300px;
+    min-height: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 450px) {
+  .img {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
 .mainContent h1 {
   color: var(--almost-black);
   font-size: 64px;
+}
+
+@media (max-width: 1200px) {
+  .mainContent h1 {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent h1 {
+    font-size: 34px;
+  }
 }
 
 .mainContent p {
@@ -43,6 +107,13 @@
   font-weight: 500;
   line-height: 1.4;
   margin: 40px 0;
+}
+
+@media (max-width: 1200px) {
+  .mainContent p {
+    text-align: center;
+    margin: 20px 0;
+  }
 }
 
 .mainContent button {
@@ -56,9 +127,21 @@
   margin-bottom: 100px;
 }
 
+@media (max-width: 1200px) {
+  .mainContent button {
+    margin-bottom: 50px;
+  }
+}
+
 .logos {
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 992px) {
+  .logos {
+    justify-content: center;
+  }
 }
 
 .logos img {
@@ -78,9 +161,8 @@
   margin-right: 32px;
 }
 
-
-:root {
-  --almost-white: hsl(0, 0%, 98%);
-  --medium-gray: hsl(0, 0%, 41%);
-  --almost-black: #141414;
+@media (max-width: 992px) {
+  .logos img:not(:last-child) {
+    margin-right: 24px;
+  }
 }

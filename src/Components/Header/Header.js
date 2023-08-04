@@ -1,4 +1,5 @@
 import styles from "./_Header.module.scss";
+import MobileNav from "./MobileNav";
 import Nav from "./Nav";
 
 const Header = () => {
@@ -24,6 +25,8 @@ const Header = () => {
             Register
           </button>
         </div>
+
+        <MobileNav />
       </div>
     </header>
   );
