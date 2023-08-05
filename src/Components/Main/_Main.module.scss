@@ -93,24 +93,24 @@
 
 .mainContent h1 {
   color: var(--almost-black);
-  font-size: 64px;
+  font-size: 4rem;
 }
 
 @media (max-width: 1200px) {
   .mainContent h1 {
-    font-size: 38px;
+    font-size: 2.375rem;
   }
 }
 
 @media (max-width: 768px) {
   .mainContent h1 {
-    font-size: 34px;
+    font-size: 2.125rem;
   }
 }
 
 .mainContent p {
   color: var(--medium-gray);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 1.4;
   margin: 40px 0;
@@ -127,24 +127,24 @@
   border: solid 2px var(--almost-black);
   background-color: var(--almost-black);
   color: var(--almost-white);
-  font-size: 14px;
+  font-size: .875rem;
   font-weight: 600;
   padding: 14px 30px;
   margin-bottom: 100px;
   cursor: pointer;
   @include prefix(border-radius, 12px);
   @include prefix(transition, (color .3s, background-color .3s));
+
+  &:hover {
+    color: var(--almost-black);
+    background-color: var(--almost-white);
+  }
 }
 
 @media (max-width: 1200px) {
   .mainContent button {
     margin-bottom: 50px;
   }
-}
-
-.mainContent button:hover {
-  color: var(--almost-black);
-  background-color: var(--almost-white);
 }
 
 .logos {

@@ -16,17 +16,15 @@
 .closeMenuIcon {
   user-select: none;
   cursor: pointer;
-  @include prefix(transition, opacity .2s)
-}
+  @include prefix(transition, opacity .2s);
 
-.openMenuIcon:hover,
-.closeMenuIcon:hover {
-  opacity: .7;
-}
+  &:hover {
+    opacity: .7;
+  }
 
-.openMenuIcon:active,
-.closeMenuIcon:active {
-  @include prefix(transform, scale(.95))
+  &:active {
+    @include prefix(transform, scale(.95))
+  }
 }
 
 .overlay {
@@ -36,15 +34,15 @@
   width: 100vw;
   height: 100vh;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, .35);
   @include prefix(transition, opacity .3s);
   opacity: 0;
   visibility: hidden;
-}
 
-.overlay.active {
-  opacity: 1;
-  visibility: visible;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .navMenu {
@@ -77,9 +75,14 @@
   padding: 10px 0;
 }
 
+.menu {
+  user-select: none;
+  cursor: pointer;
+}
+
 .menu .nameMenu,
 .content>a {
-  font-size: 14px;
+  font-size: .875rem;
   font-weight: 500;
   @include prefix(transition, color .3s);
 }
@@ -116,10 +119,10 @@
 .menu .items>* {
   cursor: pointer;
   user-select: none;
-}
 
-.menu .items>*:active {
-  @include prefix(transform, scale(.99))
+  &:active {
+    @include prefix(transform, scale(.99))
+  }
 }
 
 .content>a {
@@ -143,13 +146,13 @@
   user-select: none;
   cursor: pointer;
   border: solid 2px var(--medium-gray);
-  @include prefix(border-radius, 10px)
+  @include prefix(border-radius, 10px);
 }
 
 .buttons button:first-child {
   border: none;
   margin-right: 10px;
-  @include prefix(transition, color .3s)
+  @include prefix(transition, color .3s);
 }
 
 .buttons button:first-child:hover {
@@ -157,7 +160,7 @@
 }
 
 .buttons button:last-child {
-  @include prefix(transition, (color .3s, border-color .3s))
+  @include prefix(transition, (color .3s, border-color .3s));
 }
 
 .buttons button:last-child:hover {

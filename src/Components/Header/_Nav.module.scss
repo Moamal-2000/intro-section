@@ -30,7 +30,7 @@
 
 .nav ul li a,
 .nav ul li .menu .nameMenu {
-  font-size: 14px;
+  font-size: .875rem;
   font-weight: 500;
   @include prefix(transition, color .3s);
 }
@@ -55,9 +55,9 @@
   position: absolute;
   z-index: 10;
   top: 40px;
-  @include prefix(border-radius, 10px);
   background-color: var(--white);
-  box-shadow: rgba(100, 100, 111, 0.15) 0 7px 20px 0;
+  box-shadow: rgba(100, 100, 111, .15) 0 7px 20px 0;
+  @include prefix(border-radius, 10px);
   @include prefix(transition, opacity .3s);
   opacity: 0;
   visibility: hidden;
