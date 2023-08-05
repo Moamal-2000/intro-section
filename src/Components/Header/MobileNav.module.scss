@@ -1,7 +1,15 @@
 @import "../../Sass/mixins";
 
-.mobileNav {
+.openMenuIcon {
+  display: none;
+  width: 30px;
+  height: 18px;
+}
 
+@media (max-width: 992px) {
+  .openMenuIcon {
+    display: block;
+  }
 }
 
 .openMenuIcon,
@@ -39,19 +47,120 @@
   visibility: visible;
 }
 
-
-
-
 .navMenu {
   background-color: var(--white);
   position: fixed;
-  right: 0;
+  z-index: 1000;
+  right: -100%;
   top: 0;
   height: 100vh;
+  width: 240px;
   padding: 16px;
+  padding-top: 80px;
+  @include prefix(transition, right 1.2s);
+
+  &.active {
+    right: 0;
+    @include prefix(transition, right .6s);
+  }
 }
 
 .closeMenuIcon {
   width: 26px;
   height: 26px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.content>* {
+  padding: 10px 0;
+}
+
+.menu .nameMenu,
+.content>a {
+  font-size: 14px;
+  font-weight: 500;
+  @include prefix(transition, color .3s);
+}
+
+.menu:hover .nameMenu,
+.content>a:hover {
+  color: var(--almost-black);
+}
+
+.nameMenu,
+.content>a {
+  color: var(--medium-gray);
+  display: flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.nameMenu span {
+  padding-right: 6px;
+}
+
+.menu .items {
+  max-height: 0;
+  overflow: hidden;
+  @include prefix(transition, max-height .5s);
+
+  &.active {
+    max-height: 500px;
+    @include prefix(transition, max-height 1s);
+  }
+}
+
+.menu .items>* {
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu .items>*:active {
+  @include prefix(transform, scale(.99))
+}
+
+.content>a {
+  display: block;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.buttons button {
+  background-color: transparent;
+  outline: none;
+  padding: 10px 24px;
+  width: 100%;
+  color: var(--medium-gray);
+  font-size: .8rem;
+  font-weight: bold;
+  user-select: none;
+  cursor: pointer;
+  border: solid 2px var(--medium-gray);
+  @include prefix(border-radius, 10px)
+}
+
+.buttons button:first-child {
+  border: none;
+  margin-right: 10px;
+  @include prefix(transition, color .3s)
+}
+
+.buttons button:first-child:hover {
+  color: var(--almost-black);
+}
+
+.buttons button:last-child {
+  @include prefix(transition, (color .3s, border-color .3s))
+}
+
+.buttons button:last-child:hover {
+  border-color: var(--almost-black);
+  color: var(--almost-black);
 }

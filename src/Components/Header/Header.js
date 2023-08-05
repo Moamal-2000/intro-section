@@ -1,6 +1,6 @@
-import styles from "./_Header.module.scss";
 import MobileNav from "./MobileNav";
 import Nav from "./Nav";
+import styles from "./_Header.module.scss";
 
 const Header = () => {
   return (

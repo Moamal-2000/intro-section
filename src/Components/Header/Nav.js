@@ -20,7 +20,7 @@ const Nav = () => {
             </div>
             <div
               className={`${styles.items} ${
-                isFirstMenuActive ? `${styles.active}` : ""
+                isFirstMenuActive ? styles.active : ""
               }`}
               data-name-menu="menu-one"
             >
@@ -54,7 +54,7 @@ const Nav = () => {
             </div>
             <div
               className={`${styles.items} ${
-                isSecondMenuActive ? `${styles.active}` : ""
+                isSecondMenuActive ? styles.active : ""
               }`}
               data-name-menu="menu-two"
             >
