@@ -16,6 +16,19 @@ body {
   --white: hsl(0, 0%, 100%);
 }
 
+::selection {
+  background-color: #dbdbdb;
+}
+
+::-webkit-scrollbar {
+  background-color: #eee;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #acacac;
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
